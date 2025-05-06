@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float num1, num2, resultado;
+    char opcion;
+
+    // Pedir al usuario los datos
+    cout << "Ingrese su primer numero" << endl;
+    cin >> num1;
+    cout << "Ingrese su segundo numero" << endl;
+    cin >> num2;
+
+    // Mostrar las opciones
+    cout << "Seleccione una operacion" << endl;
+    cout << "a) suma" << endl;
+    cout << "b) resta" << endl;
+    cout << "c) multiplicacion" << endl;
+    cout << "d) division" << endl;
+    cout << "Opcion: ";
+    cin >> opcion;
+
+    // Usar un switch para seleccionar la opcion
+    switch (opcion) {
+        case 'a':
+            resultado = num1 + num2;
+            cout << "El resultado de su suma es: " << resultado << endl;
+            break;
+        case 'b':
+            resultado = num1 - num2;
+            cout << "El resultado de su resta es: " << resultado << endl;
+            break;
+        case 'c':
+            resultado = num1 * num2;
+            cout << "El resultado de su multiplicacion es: " << resultado << endl;
+            break;
+        case 'd':
+            if (num2 != 0) {
+                resultado = num1 / num2;
+                cout << "El resultado de su division es: " << resultado << endl;
+            } else {
+                cout << "Error: no se puede dividir entre cero." << endl;
+            }
+            break;
+        default:
+            cout << "Opcion invalida." << endl;
+    }
+
+    return 0;
+}
